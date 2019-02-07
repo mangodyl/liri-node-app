@@ -1,11 +1,16 @@
 
 require("dotenv").config();
 var keys = require("./keys.js");
+var Spotify = require("node-spotify-api")
 
 var argsArr = process.argv.slice(2);
 
-const command = argsArr.shift();
-const input = argsArr;
+let command = argsArr.shift();
+let input = argsArr.join(' ');
+
+console.log(input);
+console.log(" ----------- ");
+console.log("Command: " + command);
 
 switch (command) {
   case 'spotify-this-song' :
@@ -35,11 +40,21 @@ switch (command) {
 function spotify() {
   var spotify = new Spotify(keys.spotify);
 
-  spotify.search({ type: 'track', query: input }, function(err, data) {
+    if (input === '') {
+      input = "The Sign Ace of Base"
+    }
+
+    spotify.search({ type: 'track', query: input, limit: 1}, function(err, data) {
       if (err) {
         return console.log('Error occurred: ' + err);
       }
-    
-    console.log(data); 
-  });
+
+      let info = data.tracks.items[0];
+
+      console.log(`------- Artist: ${info.artists[0].name}
+      Song: ${info.name}
+      Album: ${info.album.name}
+      Preview Link: ${info.preview_url}`);
+      // console.log(data.tracks.items[0]); 
+    });
 };
