@@ -50,10 +50,25 @@ function spotify() {
 
       let info = data.tracks.items[0];
 
-      console.log(`----- Artist: ${info.artists[0].name}
+      var print = (`----- Artist: ${info.artists[0].name}
       Song: ${info.name}
       Album: ${info.album.name}
       Preview Link: ${info.preview_url}`);
+
+      console.log(print);
+
+      // Appending file to log.txt
+      fs.appendFile("log.txt", `\nSpotify: \n${print}`, function(err) {
+        if (err) {
+          console.log(err);
+        }
+    
+        else {
+          console.log("Content Added!");
+        }
+      
+      });
+      
     });
 };
 
