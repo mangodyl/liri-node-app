@@ -4,6 +4,7 @@ var keys = require("./keys.js");
 var Spotify = require("node-spotify-api");
 var axios = require("axios");
 var moment = require("moment");
+var fs = require("fs");
 
 var argsArr = process.argv.slice(2);
 
@@ -27,7 +28,7 @@ switch (command) {
     break;
 
   case 'do-what-it-says' :
-    anyInput();
+    read();
     console.log("Fine, I guess I'll do the work...");
     break;
 }
@@ -49,7 +50,7 @@ function spotify() {
 
       let info = data.tracks.items[0];
 
-      console.log(`------- Artist: ${info.artists[0].name}
+      console.log(`----- Artist: ${info.artists[0].name}
       Song: ${info.name}
       Album: ${info.album.name}
       Preview Link: ${info.preview_url}`);
@@ -101,4 +102,20 @@ function movie() {
     .catch((error) => {
       console.log("OMDB Error: " + error)
     });
+};
+
+
+function read() {
+  fs.readFile("random.txt", "utf8", function(error, data) {
+
+    if (error) {
+      return console.log(error);
+    }
+    
+    var dataArr = data.split(',');
+    command = dataArr[0];
+    input = dataArr[1];
+    spotify();
+    
+  });
 };
