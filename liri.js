@@ -62,11 +62,9 @@ function spotify() {
         if (err) {
           console.log(err);
         }
-    
         else {
           console.log("Content Added!");
-        }
-      
+        };
       });
       
     });
@@ -105,14 +103,24 @@ function movie() {
   axios.get("http://www.omdbapi.com/?apikey=trilogy&t=" + input)
     .then((response) => {
       let data = response.data;
-      console.log(`----- Title: ${data.Title}
+      var print = (`----- Title: ${data.Title}
       Year: ${data.Year}
       IMDb Rating: ${data.Ratings[0].Value}
       Rotten Tomatoes Rating: ${data.Ratings[1].Value}
       Country of Production: ${data.Country}
       Language: ${data.Language}
       Plot: ${data.Plot}
-      Actors: ${data.Actors}`)
+      Actors: ${data.Actors}`);
+
+      // Appending file to log.txt
+      fs.appendFile("log.txt", `\nMovie: \n${print}`, function(err) {
+        if (err) {
+          console.log(err);
+        }
+        else {
+          console.log("Content Added!");
+        };
+      });
     })
     .catch((error) => {
       console.log("OMDB Error: " + error)
