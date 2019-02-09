@@ -31,6 +31,7 @@ switch (command) {
     read();
     console.log("Fine, I guess I'll do the work...");
     break;
+  
 }
 
 
@@ -138,7 +139,22 @@ function read() {
     var dataArr = data.split(',');
     command = dataArr[0];
     input = dataArr[1];
-    spotify();
     
+    switch (command) {
+      case 'spotify-this-song' :
+        spotify();
+        console.log("Here's that song info you wanted...");
+        break;
+      
+      case 'concert-this' :
+        bands();
+        console.log("These are the next 5 concerts...");
+        break;
+    
+      case 'movie-this' :
+        movie();
+        console.log("Here's your movie info...")
+        break;
+    };
   });
 };
