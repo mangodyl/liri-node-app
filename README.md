@@ -31,7 +31,7 @@ Uses the Bandsintown API to show you the date and location of a band's next 5 co
    ![Image showing the concert-this output](images/concert-result.png)
 
 ### *spotify-this-song* ###
-Uses the node-spotify-app package to retrieve info and a sample link for any song on Spotify.
+Uses the `node-spotify-app` package to retrieve info and a sample link for any song on Spotify.
    
    ![Image showing spotify-this-song output](images/spotify-result.png)
 
@@ -41,7 +41,7 @@ Uses the OMDb API to give you a load of info on the movie of choice.
    ![Image showing the movie-this output](images/movie-result.png)
 
 ### *do-what-it-says* ###
-Replace the text in random-txt in the format `[your-command],[your search terms]` to execute any of the above command another way.
+Replace the text in random.txt in the format `[your-command],[your search terms]` to execute any of the above command another way.
 
   ![Image showing do-what-it-says-output](images/random-txt-result.png)
 
@@ -50,14 +50,14 @@ Replace the text in random-txt in the format `[your-command],[your search terms]
 
 **Bonus:** What happens when you don't search for anything in particular?
 
-Using the do-what-it-says command you'll get a 1999 classic jam:
+Using the `do-what-it-says` command you'll get a 1999 classic jam:
 
 ![Image of random.txt](images/random-txt.png)
 
-Though if you use spotify-this-song with no search terms, you'll go back to 1992 instead with Ace of Base:
+Though if you use `spotify-this-song` with no search terms, you'll go back to 1992 instead with Ace of Base:
 
 ![Image of spotify-this default search](images/spotify-no-input.png)
 
-And if you try movie-this without a movie, this is what you'll get:
+And if you try `movie-this` without a movie, this is what you'll get:
 
 ![Image of movie-this default search](images/movie-no-input.png)
