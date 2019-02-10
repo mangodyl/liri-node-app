@@ -79,23 +79,37 @@ function bands() {
   axios.get("https://rest.bandsintown.com/artists/" + input + "/events?app_id=codingbootcamp")
   .then((response) => {
     let eventArray = response.data;
-    console.log(` > Band: ${eventArray[0].lineup[0]} <`);
+    let printArray = [];
+    printArray.push(` > Band: ${eventArray[0].lineup[0]} <`);
     for(let i = 0; i < 5; i++) {
-      console.log("----------")
-      console.log(`   Venue: ${eventArray[i].venue.name}`);
+      printArray.push("----------");
+      printArray.push(`   Venue: ${eventArray[i].venue.name}`);
       if(eventArray[i].venue.region === '') {
-        console.log(`   Location: ${eventArray[i].venue.city}, ${eventArray[i].venue.country}`);
+        printArray.push(`   Location: ${eventArray[i].venue.city} ${eventArray[i].venue.country}`);
       }
       else {
-        console.log(`   Location: ${eventArray[i].venue.city}, ${eventArray[i].venue.region}, ${eventArray[i].venue.country}`);
+        printArray.push(`   Location: ${eventArray[i].venue.city} ${eventArray[i].venue.region} ${eventArray[i].venue.country}`);
       };
       let eventTime = moment(eventArray[i].venue.datetime);
       let eventDate = eventTime.utc().format('MM-DD-YYYY');
-      console.log(`   Date: ${eventDate}`);
-    }
+      printArray.push(`   Date: ${eventDate}`);
+    };
+
+    console.log(printArray);
+    let print = printArray.toString().split(',').join("\n");
+
+    // Appending file to log.txt
+    fs.appendFile("log.txt", `\nSpotify: \n${print}`, function(err) {
+      if (err) {
+        console.log(err);
+      }
+      else {
+        console.log("Content Added!");
+      };
+    });
   })
   .catch((error) => {
-    console.log("BandsInTown Error: " + error);
+    ("BandsInTown Error: " + error);
   });
 };
 
@@ -106,7 +120,7 @@ function movie() {
   if (input === '') {
     input = "Mr Nobody";
   };
-  
+
   axios.get("http://www.omdbapi.com/?apikey=trilogy&t=" + input)
     .then((response) => {
       let data = response.data;
