@@ -46,7 +46,7 @@ Replace the text in random.txt in the format `[your-command],[your search terms]
   ![Image showing do-what-it-says-output](images/random-txt-result.png)
 
 
-### Happy searching! :v: ###
+## Happy searching! :v: ##
 
 **Bonus:** What happens when you don't search for anything in particular?
 
