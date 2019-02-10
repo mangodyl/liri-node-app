@@ -13,59 +13,7 @@ Movie:
       Language: English, Italian, Latin
       Plot: The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.
       Actors: Marlon Brando, Al Pacino, James Caan, Richard S. Castellano
-Spotify: 
- > Band: Foo Fighters <
-----------
-   Venue: Epicenter Festival
-   Location: Rockingham
- NC
- United States
-   Date: 02-10-2019
-----------
-   Venue: The Fillmore New Orleans
-   Location: New Orleans
- LA
- United States
-   Date: 02-10-2019
-----------
-   Venue: The Fillmore New Orleans
-   Location: New Orleans
- LA
- United States
-   Date: 02-10-2019
-----------
-   Venue: Sonic Temple Festival (May 17-19)
-   Location: Columbus
- OH
- United States
-   Date: 02-10-2019
-----------
-   Venue: Pula Arena
-   Location: Pula
- Croatia
-   Date: 02-10-2019
-Spotify: 
- > Band: Foo Fighters <
-----------
-   Venue: Epicenter Festival
-   Location: Rockingham NC United States
-   Date: 02-10-2019
-----------
-   Venue: The Fillmore New Orleans
-   Location: New Orleans LA United States
-   Date: 02-10-2019
-----------
-   Venue: The Fillmore New Orleans
-   Location: New Orleans LA United States
-   Date: 02-10-2019
-----------
-   Venue: Sonic Temple Festival (May 17-19)
-   Location: Columbus OH United States
-   Date: 02-10-2019
-----------
-   Venue: Pula Arena
-   Location: Pula Croatia
-   Date: 02-10-2019
+
 Spotify: 
  > Band: Foo Fighters <
 ----------
