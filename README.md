@@ -3,7 +3,7 @@ Use this node application to find upcoming concerts and get info on songs, movie
 
 ![Image showing the log.txt file](images/log-results.png)
 
-## How to use liri:
+## How to use liri: :bulb:
 
 ![Image showing the input format](images/input-example.png)
 
@@ -24,7 +24,7 @@ Here are the commands you can use:
   
   * `do-what-it-says`
 
-## Examples ##
+## Examples: :mag_right: ##
 ### *concert-this* ### 
 Uses the Bandsintown API to show you the date and location of a band's next 5 concerts.
    
@@ -46,7 +46,7 @@ Replace the text in random.txt in the format `[your-command],[your search terms]
   ![Image showing do-what-it-says-output](images/random-txt-result.png)
 
 
-### Happy searching! ###
+### Happy searching! :v: ###
 
 **Bonus:** What happens when you don't search for anything in particular?
 
