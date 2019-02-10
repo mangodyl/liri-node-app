@@ -72,6 +72,7 @@ function spotify() {
 };
 
 
+
 // Bands In Town API
 
 function bands() {
@@ -101,6 +102,11 @@ function bands() {
 // OMDB API
 
 function movie() {
+
+  if (input === '') {
+    input = "Mr Nobody";
+  };
+  
   axios.get("http://www.omdbapi.com/?apikey=trilogy&t=" + input)
     .then((response) => {
       let data = response.data;
@@ -112,6 +118,8 @@ function movie() {
       Language: ${data.Language}
       Plot: ${data.Plot}
       Actors: ${data.Actors}`);
+
+      console.log(print);
 
       // Appending file to log.txt
       fs.appendFile("log.txt", `\nMovie: \n${print}`, function(err) {
