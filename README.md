@@ -1,6 +1,8 @@
 # liri-node-app
 Use this node application to find upcoming concerts and get info on songs, movies & tv shows! Your info will be displayed both in your **terminal** and in the **log.txt** file!
 
+![Image showing the log.txt file](images/log-results.png)
+
 ## How to use liri:
 
 ![Image showing the input format](images/input-example.png)
@@ -52,7 +54,7 @@ Using the do-what-it-says command you'll get a 1999 classic jam:
 
 ![Image of random.txt](images/random-txt.png)
 
-Though if you use spotify-this with no search terms, you'll go back to 1992 instead with Ace of Base:
+Though if you use spotify-this-song with no search terms, you'll go back to 1992 instead with Ace of Base:
 
 ![Image of spotify-this default search](images/spotify-no-input.png)
 
