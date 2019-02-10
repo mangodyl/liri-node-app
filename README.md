@@ -26,7 +26,7 @@ Here are the commands you can use:
 ### *concert-this* ### 
 Uses the Bandsintown API to show you the date and location of a band's next 5 concerts.
    
-   ![Image showing the concert-this output]
+   ![Image showing the concert-this output](images/concert-result.png)
 
 ### *spotify-this-song* ###
 Uses the node-spotify-app package to retrieve info and a sample link for any song on Spotify.
@@ -54,8 +54,8 @@ Using the do-what-it-says command you'll get a 1999 classic jam:
 
 Though if you use spotify-this with no search terms, you'll go back to 1992 instead with Ace of Base:
 
-![Image of spotify-this default search]
+![Image of spotify-this default search](images/spotify-no-input.png)
 
 And if you try movie-this without a movie, this is what you'll get:
 
-![Image of movie-this default search]
+![Image of movie-this default search](images/movie-no-input.png)
